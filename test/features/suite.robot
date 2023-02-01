@@ -20,4 +20,4 @@ Test Shadow DOM
     Select external iFrame
     Select internal iFrame
     ${shadow_text}    Get shadow DOM text
-    Should Be Equal    ${shadow_text}    DOM element
+    Should Be Equal    ${shadow_text}    Inside Shadow DOM
