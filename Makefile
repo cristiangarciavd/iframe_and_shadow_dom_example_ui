@@ -5,5 +5,5 @@ setup:
 
 tests:
 	@echo "Executing testing scenarios"
-	python -m pipenv run pytest --cache-clear
+	python -m pipenv run robot test
 	@echo "Finished testing."
