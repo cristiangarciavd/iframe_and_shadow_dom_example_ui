@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 robotframework = "*"
 robotframework-seleniumlibrary = "*"
-webdrivermanager = "*"
+webdriver-manager = "*"
 test_package = {editable = true, path = "."}
 
 [dev-packages]
