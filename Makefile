@@ -5,5 +5,5 @@ setup:
 
 tests:
 	@echo "Executing testing scenarios"
-	python -m pipenv run robot test
+	python -m pipenv run robot -d reports test
 	@echo "Finished testing."
