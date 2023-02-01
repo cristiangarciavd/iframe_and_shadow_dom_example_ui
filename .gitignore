@@ -5,3 +5,6 @@ build
 reports/archive
 reports/output.json
 reports/report.html
+log.html
+output.xml
+report.html
