@@ -2,9 +2,7 @@ test_package.egg-info
 .venv
 .pytest_cache
 build
-reports/archive
-reports/output.json
-reports/report.html
+reports/
 log.html
 output.xml
 report.html
