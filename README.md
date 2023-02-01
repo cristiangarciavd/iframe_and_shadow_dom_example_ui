@@ -11,3 +11,8 @@ pip install pipenv
 pipenv install -d
 
 2) make tests : run tests and create report file
+
+
+# Extra: Change Browser!
+Change Chrome or Firefox browser on test/resources/resources.robot -> ${Browser}
+(first time it will install an .exe file)
