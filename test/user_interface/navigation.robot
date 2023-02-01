@@ -1,3 +1,7 @@
+*** Settings ***
+Resource    resources/shadow_paths.robot
+
+
 *** Keywords ***
 Select external iFrame
     Wait Until Element Is Visible    //iframe[contains(@class, 'plunker')]
@@ -11,7 +15,5 @@ Get iFrame text
     [return]    ${text}
 
 Get shadow DOM text
-    ${Path}=  document.querySelector('#container').shadowRoot
-    ...  .querySelector('h1[id="inside"]')
-    ${text}    Get Text     dom:${Path}
+    ${text}    Get Text     dom:${shadow_dom_text}
     [return]    ${text}
