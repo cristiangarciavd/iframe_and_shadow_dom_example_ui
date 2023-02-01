@@ -11,9 +11,13 @@ Test Teardown  Exit Selenium
 
 *** Test Cases ***
 Test iFrame
-    Navigate To Add Invoice
-    Fill Out Invoice Details    ${invoice}
-    Submit Invoice Form
-    ${invoice_id}=   Get Invoice Id     ${invoice}
-    Page Should Contain     ${invoice_id}
-    Open Invoice    ${invoice_id}
+    Select external iFrame
+    Select internal iFrame
+    ${iframe_text}    Get iFrame text
+    Should Be Equal    ${iframe_text}    DOM element
+
+Test Shadow DOM
+    Select external iFrame
+    Select internal iFrame
+    ${shadow_text}    Get shadow DOM text
+    Should Be Equal    ${shadow_text}    DOM element
