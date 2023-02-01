@@ -13,6 +13,7 @@ class TestSuite():
 
   script = 'return arguments[0].shadowRoot'
 
+
   def setup_method(self, method):
     warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
     warnings.filterwarnings(action="ignore", category=DeprecationWarning)
