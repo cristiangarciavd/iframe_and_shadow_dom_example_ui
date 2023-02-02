@@ -51,6 +51,7 @@ class TestSuite():
     self.driver.switch_to.frame(iframe_ext)
     iframe_int = self.driver.find_element(*IFrame.INTERNAL_I_FRAME)
     self.driver.switch_to.frame(iframe_int)
+
     shadow_host = self.driver.find_element(*ShadowDOM.SHADOW_HOST)
     shadow_root = self.expand_shadow_element(shadow_host)
     text_to_verify = shadow_root.find_element(*ShadowDOM.SHADOW_DOM_ELEMENT).text

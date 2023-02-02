@@ -8,6 +8,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 class ChromeWebDriver:
     """Chrome web driver implementation
     """
+
     type_browser = None
 
     @staticmethod
