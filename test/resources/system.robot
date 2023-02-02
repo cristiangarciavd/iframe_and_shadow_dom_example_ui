@@ -16,3 +16,17 @@ Exit Selenium
     Set Screenshot Directory    reports/screenshots
     Capture Page Screenshot
     Close Browser
+
+
+# *** Keywords ***
+# Configure Selenium
+#     Set Selenium Implicit Wait    10 Seconds
+
+# Navigate To Homepage
+#     Open Browser    ${SiteUrl}    ${BROWSER}
+#     Maximize Browser Window
+
+# Exit Selenium
+#     Set Screenshot Directory    reports/screenshots
+#     Capture Page Screenshot
+#     Close Browser

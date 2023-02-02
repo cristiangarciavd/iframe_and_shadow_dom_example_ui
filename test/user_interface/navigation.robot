@@ -1,20 +1,16 @@
 *** Settings ***
 Documentation          Robot custom keywords to interact with elements
-Resource               resources/shadow_paths.robot
+
+Resource               resources/elements.robot
 
 
 *** Keywords ***
-Select external iFrame
-    Wait Until Element Is Visible    //iframe[contains(@class, 'plunker')]
-    Select Frame    //iframe[contains(@class, 'plunker')]
+The user moves to frame
+    [Arguments]    ${element}
+    Wait Until Element Is Visible    ${element}
+    Select Frame    ${element}
 
-Select internal iFrame
-    Select Frame    //iframe[@id="preview"]
 
-Get iFrame text
-    ${text}    Get Text     css:h1
-    [return]    ${text}
-
-Get shadow DOM text
-    ${text}    Get Text     dom:${shadow_dom_text}
-    [return]    ${text}
+The ${element_text} should be equal to "${assertion_text}"
+    ${ui_text}    Get Text     ${element_text}
+    Should Be Equal    ${ui_text}    ${assertion_text}
