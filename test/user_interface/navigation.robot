@@ -1,5 +1,6 @@
 *** Settings ***
-Resource    resources/shadow_paths.robot
+Documentation          Robot custom keywords to interact with elements
+Resource               resources/shadow_paths.robot
 
 
 *** Keywords ***

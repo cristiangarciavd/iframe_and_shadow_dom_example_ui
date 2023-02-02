@@ -1,9 +1,11 @@
 *** Settings ***
-Library    ../../core/main/drivers/driver_manager.py
+Documentation          Robot custom keywords
+Library                ../../core/main/drivers/driver_manager.py
+
 
 *** Keywords ***
 Configure Selenium
-     Set Selenium Implicit Wait    10 Seconds
+    Set Selenium Implicit Wait    10 Seconds
 
 Navigate To Homepage
     ${driver_path}   GET DRIVER    ${BROWSER}

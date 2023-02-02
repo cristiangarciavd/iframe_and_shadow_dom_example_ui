@@ -1,12 +1,13 @@
-"""Module to define Web Driver path
+"""Module to define Web Driver paths
 """
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 try:
     from robot.api.deco import keyword
     ROBOT = False
 except Exception:
     ROBOT = False
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
+
 
 class DriverManager:
     """Class to define WebDriver factory
@@ -18,7 +19,7 @@ class DriverManager:
     }
 
     @classmethod
-    def get_driver(cls, browser="CHROME"):
+    def get_driver_path(cls, browser="CHROME"):
         """Method to get a specific browser driver path
 
         Parameters
@@ -34,6 +35,7 @@ class DriverManager:
 
         return cls._browsers[browser.upper()].install()
 
+
 @keyword("GET DRIVER")
 def get_driver(browser):
     """This method initialices a driver instance.
@@ -42,4 +44,4 @@ def get_driver(browser):
         driver_path: return the webdriver path
     """
 
-    return DriverManager.get_driver(browser)
+    return DriverManager.get_driver_path(browser)
